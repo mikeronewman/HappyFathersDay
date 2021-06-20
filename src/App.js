@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import ReactDOM from 'react-dom';
 import './App.css';
 import Joke from './components/Joke';
 import Doggo from './components/Doggo';
@@ -20,7 +19,6 @@ function App() {
           onClick={() => {
             const newValue = count + 1;
             setCount(newValue);
-            console.log(count);
           }}
           variant="contained"
           color="primary"

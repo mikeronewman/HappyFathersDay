@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
-function Doggo(count) {
+function Doggo({count}) {
   const [doggo, setDoggo] = useState('');
 
   async function fetchDoggoUrl() {
