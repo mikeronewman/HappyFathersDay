@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import ReactDOM from 'react-dom';
 import './App.css';
+import Joke from './components/Joke';
+import Doggo from './components/Doggo';
+import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
+import Button from '@material-ui/core/Button';
 
 function App() {
+  const [count, setCount] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Box className="app" color="primary.main">
+      <Container maxWidth="sm">
+        <h1>Happy Father's Day!</h1>
+        <Joke count={count} />
+        <Doggo count={count} />
+        <Button 
+          onClick={() => {
+            const newValue = count + 1;
+            setCount(newValue);
+            console.log(count);
+          }}
+          variant="contained"
+          color="primary"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+            Click at your own risk
+        </Button>
+      </Container>
+    </Box>
   );
 }
 
