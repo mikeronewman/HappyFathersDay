@@ -22,7 +22,7 @@ function Joke({count}) {
 
   return (
     <div>
-      <h4>{joke}</h4>
+      <h4>test{joke}</h4>
     </div>
   );
 }
