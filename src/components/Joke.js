@@ -7,7 +7,7 @@ function Joke({count}) {
   async function fetchJoke() {
     const result = await axios({
       method: 'get',
-      url: 'https://icanhazdadjoke.com/j/1',
+      url: 'https://icanhazdadjoke.com/',
       responseType: 'json',
       headers: {
         'Accept': 'application/json'
@@ -22,7 +22,7 @@ function Joke({count}) {
 
   return (
     <div>
-      <h4>test{joke}</h4>
+      <h4>{joke}</h4>
     </div>
   );
 }
